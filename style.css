@@ -5,7 +5,7 @@ body {
     width: 1200px;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 300;
-    color:white;background-color:black;
+    color:white;background-color:#13294b;
 }
 
 .specialname {
@@ -35,7 +35,7 @@ footer .copyright {
 section {
     width:1180px;height: 410px;
     background-color: #2e2d29;
-    border-style: solid; border-width: 10px; border-color: #820000;
+    border-style: solid; border-width: 10px; border-color: #c69214;
 }
 
 aside {
