@@ -38,11 +38,6 @@ section {
     border-style: solid; border-width: 10px; border-color: #c69214;
 }
 
-section {
-    width:1180px;height: 410px;
-    background-color: #2e2d29;
-    border-style: solid; border-width: 10px; border-color: #c69214;
-}
 
 aside {
     position:relative;
