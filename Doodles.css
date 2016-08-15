@@ -1,8 +1,113 @@
+/* Center Page */
 body {
-    background: lightblue;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color:white;background-color:#13294b;
 }
 
-canvas {
-    background: #fff;
-    margin: 20px;
+.specialname {
+    text-transform:uppercase;
+    font-weight:normal;
 }
+
+header {
+    clear:both;
+    background-color:#2e2d29;
+    padding:1em; margin-bottom: 1em;
+}
+footer {
+    clear:both;
+    background-color:#2e2d29;
+    padding:1em; margin-top: 1em;
+    padding-top:0.7em;
+}
+
+footer .contactinfo {
+    padding-bottom: 1em;
+}
+footer .copyright {
+    padding-top: 0.7em;
+}
+
+section {
+    width:1180px;height: 410px;
+    background-color: #2e2d29;
+    border-style: solid; border-width: 10px; border-color: #c69214;
+}
+
+section {
+    width:1180px;height: 410px;
+    background-color: #2e2d29;
+    border-style: solid; border-width: 10px; border-color: #c69214;
+}
+
+aside {
+    position:relative;
+    width:580px;
+    height: 410px;
+    float:left;
+    background-color:#2e2d29;
+}
+
+aside img{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    max-width: 100%;
+}
+
+article {
+    width:580px;
+    height: 410px;
+    float:left;
+    /*border-style: solid; border-width: 1em; border-color: #820000;*/
+    background-color:#2e2d29;
+    letter-spacing: 0px;
+}
+
+nav ul  {
+    margin:0;padding:0;
+}
+nav ul li {
+    display:inline; margin:5px;
+}
+
+nav a:visited, header a:visited, footer a:visited,
+nav a:link, header a:link, footer a:link, header a:hover, header a:active,
+article a:link, article a:visited {
+    text-decoration: none;
+    color:white;
+    font-size:1em;
+}
+nav a:hover, footer a:hover, nav a:active, footer a:active, article a:active,
+article a:hover  {
+    text-decoration: underline;
+    color:#820000;
+}
+
+ul.contact {
+    list-style:none;
+    padding-left:0;
+}
+
+ul.contact li {
+    margin-bottom: 100px;
+}
+
+
+
+
+/*nav li.current a:link,nav li.current a:hover,nav li.current a:visited,nav li.current a:active{
+	text-decoration: underline;
+	color:#820000;
+ }*/
