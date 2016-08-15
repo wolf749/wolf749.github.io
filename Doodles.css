@@ -38,6 +38,10 @@ section {
     border-style: solid; border-width: 10px; border-color: #c69214;
 }
 
+smallpad {
+    width:1180px;height: 10px;
+    background-color:#13294b;
+}
 
 aside {
     position:relative;
