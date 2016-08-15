@@ -36,11 +36,7 @@ section {
     width:1180px;height: 410px;
     background-color: #2e2d29;
     border-style: solid; border-width: 10px; border-color: #c69214;
-}
-
-smallpad {
-    width:1180px;height: 10px;
-    background-color:#13294b;
+    padding-bottom: 10px;
 }
 
 aside {
