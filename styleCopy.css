@@ -8,36 +8,41 @@ body {
     color:white;background-color:#13294b;
 }
 
-header {
-    background-color:#2e2d29;
-    padding:1em; margin-bottom: 1em;
-    
-}
-
 .specialname {
     text-transform:uppercase;
     font-weight:normal;
 }
 
-nav ul  {
-    margin:0;padding:0;
+header {
+/*    clear:both;*/
+    overflow: visible;
+    background-color:#2e2d29;
+    padding:1em; margin-bottom: 1em;
+}
+footer {
+    clear:both;
+    background-color:#2e2d29;
+    padding:1em; margin-top: 1em;
+    padding-top:0.7em;
 }
 
-nav ul li {
-    display:inline; margin:5px;
+footer .contactinfo {
+	padding-bottom: 1em;
+}
+footer .copyright {
+	padding-top: 0.7em;
 }
 
 section {
-    width:1180px;height: 600px;
+    width:1180px;height: 410px;
     background-color: #2e2d29;
-/*    padding: 0px 10px 0px 10px;*/
     border-style: solid; border-width: 10px; border-color: #005900;
 }
 
 aside {
     position:relative;
-    width:525px;
-    height: 600px;
+    width:580px;
+    height: 410px;
     float:left;
     background-color:#2e2d29;
 }
@@ -45,44 +50,55 @@ aside {
 aside img{
     position:absolute;
     top:0;
-    bottom:150px;
+    bottom:0;
     left:0;
     right:0;
     margin:auto;
-    
+
     margin-left: auto;
     margin-right: auto;
-    
+
     max-width: 100%;
 }
 
-/* Style The Dropdown Button */
+article {
+    width:580px;
+    height: 410px;
+    float:left;
+    border-style: solid; border-width: 1em; border-color: #820000;
+    background-color:#2e2d29;
+    letter-spacing: 0px;
+}
+
 .dropbtn {
-    background-color: #2e2d29;
+    background-color: #4CAF50;
     color: white;
     padding: 16px;
     font-size: 16px;
-    border-style: none;
+    border: none;
     cursor: pointer;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #2e2d29;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1000;
 }
 
-/* Links inside the dropdown */
+.dropdown-content-list {
+    position: absolute;
+    display: none;
+    min-width: 160px;
+    text-align: left;
+}
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -90,19 +106,23 @@ aside img{
     display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
 
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+nav ul  {
+    margin:0;padding:0;
+}
+nav ul li {
+    display:inline; margin:5px;
+}
 
 nav a:visited, header a:visited, footer a:visited,
 nav a:link, header a:link, footer a:link, header a:hover, header a:active,
@@ -117,17 +137,19 @@ article a:hover  {
     color:#820000;
 }
 
+ul.contact {
+    list-style:none;
+    padding-left:0;
+}​
 
-footer {
-    clear:both;
-    background-color:#2e2d29;
-    padding:1em; margin-top: 1em;
-    padding-top:0.7em;
-}
+ul.contact li {
+    margin-bottom: 100px;
+}​
 
-footer .contactinfo {
-    padding-bottom: 1em;
-}
-footer .copyright {
-    padding-top: 0.7em;
-}
+
+
+
+/*nav li.current a:link,nav li.current a:hover,nav li.current a:visited,nav li.current a:active{*/
+/*	text-decoration: underline;*/
+/*	color:#820000;*/
+/*}*/
