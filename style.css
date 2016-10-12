@@ -23,6 +23,37 @@ ol.c {
     list-style-type: upper-roman;
 }
 
+
+
+button.accordion {
+    background-color: #BFF1EB;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border-radius: 4px; border-style: solid; border-width: 2px; border-color: #005900;
+    text-align: left;
+    outline: none;
+    font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;
+    font-size: 15px;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #9EC3FF;
+}
+
+div.panel {
+    padding: 0 10px;
+    display: none;
+    background-color: #2e2d29;
+}
+
+div.panel.show {
+    display: block;
+}
+
+
+
+
 nav ul  {
     margin:0;padding:0;
 }
@@ -32,7 +63,7 @@ nav ul li {
 }
 
 section {
-    width:1180px;height: 600px;
+    width:1180px;min-height: 600px;
     background-color: #2e2d29;
     padding: 0px 10px 0px 10px;
     font-size: 17px;

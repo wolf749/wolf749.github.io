@@ -6,7 +6,8 @@
         <meta charset="utf-8">
             <meta name="Description" content="">
                 <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+                    
+                    </head>
     
     
     <!--[if lt IE 9]>
@@ -21,16 +22,22 @@
             <nav>
                 <ul>
                     <li><a href="./3DViewer/index.html">Home</a></li>
-                    <li><a href="./Extended_About.html">Links</a></li>
+                    <li><a href="./Extended_About.html">Exposition</a></li>
                     <li><a href="./">Research Ideas</a></li>
                     <li>
                         <div class="dropdown">
                             <button class = "dropbtn"> <a href="./Projects.html">Projects</a>
                             </button>
                             <div class="dropdown-content">
-                                <a href="./Project1.html"> Project 1</a>
-                                <a href="./Project2.html"> Project 2</a>
-                                <a href="./Project3.html"> Project 3</a>
+                                <a href="./Project1.html"> Procedural Terrain</a>
+                                <a href="./Project2.html"> Curve Vector Space</a>
+                                <a href="./Project3.html"> Computational Physics</a>
+                                <a href="./Project4.html"> Bezier Patch Pathfinding</a>
+                                <a href="./Project5.html"> Level Set Surfaces</a>
+                                <a href="./Project6.html"> Generalized Thomson Problem</a>
+                                <a href="./Project7.html"> Shape Grammar Building</a>
+                                <a href="./Project8.html"> 2D Ising Model</a>
+                                <a href="./Project9.html"> Arch Analysis</a>
                             </div>
                         </div>
                     </li><a href="./"> My Game </a></li>
@@ -40,12 +47,22 @@
         </header>
         
         
-<!--        Project 1 Section-->
-
+        <!--        Project 1 Section-->
+        
         <section>
-            <h3 class ="specialname"> Pathfinding </h3>
+<!--            <h3 class ="specialname"> Pathfinding </h3>-->
 
             <article>
+                <p>In these sections I'll be giving brief overviews of the literature in a particular subject as well as exploring possible improvements [which I might migrate over to Research Ideas!]</p>
+                <hr>
+                
+                
+                
+            </article>
+            
+            
+            <button class="accordion">Pathfinding</button>
+            <div class="panel">
                 <p> In this section I'm going to give an overview of Pathfinding algorithms in video games [and in research]. </p>
                 
                 <p>
@@ -54,11 +71,27 @@
                 <p> A* showed up around 1968 and is a graph-based method. Given two nodes on a graph, A* finds the path that minimizes the sum of the costs between the two nodes. Since around 2000, most A* methods in games utilize a <a href="https://en.wikipedia.org/wiki/Navigation_mesh">navigation mesh</a>, which converts the terrain of the game into a graph data structure. Unity's built-in pathfinding routines are a good example of this.
                 
                 </p>
-                
-
-                
-            </article>
-
+            </div>
+            
+            <button class="accordion">Terrain Generation</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <button class="accordion">Real Time Strategy AI</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <button class="accordion">Section 3</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <button class="accordion">Section 3</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
             
         </section>
         
@@ -94,6 +127,18 @@
                 <p>&copy; 2015 <a href="./">Clayton Anderson</a>. All rights reserved.</p>
             </div>
         </footer>
+        
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        </script>
         
     </body>
 </html>
