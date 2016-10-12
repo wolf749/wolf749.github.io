@@ -1,0 +1,25 @@
+All-around Awesome!
+
+http://gafferongames.com/
+http://procworld.blogspot.com/
+
+Pathfinding
+Astar
+	astar cuda : http://publications.lib.chalmers.se/records/fulltext/129175.pdf
+	same from nvidia : http://dl.acm.org/citation.cfm?id=1413968
+Geodesic
+	Fast Marching Methods
+		http://www.pnas.org/content/95/15/8431.long
+	Phase Flow
+		http://statweb.stanford.edu/~candes/papers/GeodesicFlow.pdf
+	Steepest Decent
+		http://cs.stanford.edu/people/jbaek/18.821.paper2.pdf
+	fast & exact / approx geodesic : http://www.cs.harvard.edu/~sjg/papers/geod.pdf
+	
+ode gpu [baden] : http://dl.acm.org/citation.cfm?id=1887701
+navigation field : http://gamma.cs.unc.edu/DCrowd/
+continuum crowds : https://pdfs.semanticscholar.org/1f05/4e5f08a5ab00e6766eab5b80bad0e437fe77.pdf
+Classical Mech [good] : http://www.macs.hw.ac.uk/~simonm/mechanics.pdf
+
+
+Procedural Generation

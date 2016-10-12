@@ -6,7 +6,7 @@
         <meta charset="utf-8">
             <meta name="Description" content="">
                 <link rel="stylesheet" type="text/css" href="style.css">
-                    </head>
+    </head>
     
     
     <!--[if lt IE 9]>
@@ -40,30 +40,25 @@
         </header>
         
         
-        <!--        Project 1 Section-->
-        
+<!--        Project 1 Section-->
+
         <section>
-            
-            <aside>
-                <a href = "Project_Samples/curves_vector_space.png">
-                    <img src="Project_Samples/curves_vector_space.png" width="550"height="215">
-                        </a>
-            </aside>
-            
+            <h3 class ="specialname"> Pathfinding </h3>
+
             <article>
-                <h3 class ="specialname"> Procedural Curves 6/5/16 </h3>
-                <p><br> This project is my implementation of Dongsung Huh's paper on <a href="https://arxiv.org/abs/1506.07515"> The Vector Space of Convex Curves: How to Mix Shapes</a></br>
-                <br> This paper outlines a really cool idea: how to add curves together in a visually native way. The math here is right out of differentiable geometry, where the log-radius is specified by a period function. I came across this paper while trying to devise a way to pick a procedurally generate a castle. In particular, how to generate the outline a castle should occupy [walls, towers, and the like can follow pretty naturally once the outline is specified].
-                </br>
+                <p> In this section I'm going to give an overview of Pathfinding algorithms in video games [and in research]. </p>
                 
+                <p>
+                Pathfinding in games almost exclusively use <a href="https://en.wikipedia.org/wiki/A*_search_algorithm">A*</a>, but navigation fields both discrete and continuous versions (see below) are also gaining traction particularly where pathfinding has to be done for many agents. I've gotten interested in solving pathfinding problems on smooth surfaces, which typically includes solving the <a href="https://en.wikipedia.org/wiki/Geodesic">geodesic equations</a>.</p>
+                
+                <p> A* showed up around 1968 and is a graph-based method. Given two nodes on a graph, A* finds the path that minimizes the sum of the costs between the two nodes. Since around 2000, most A* methods in games utilize a <a href="https://en.wikipedia.org/wiki/Navigation_mesh">navigation mesh</a>, which converts the terrain of the game into a graph data structure. Unity's built-in pathfinding routines are a good example of this.
                 
                 </p>
                 
+
+                
             </article>
-            
-            <div class="cl  earfloats"></div>
-            
-            
+
             
         </section>
         

@@ -2,7 +2,7 @@
 body {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
+    width: 1220px;
     font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;
     font-weight: 300;
     color:white;background-color:#13294b;
@@ -19,6 +19,10 @@ header {
     font-weight:normal;
 }
 
+ol.c {
+    list-style-type: upper-roman;
+}
+
 nav ul  {
     margin:0;padding:0;
 }
@@ -30,9 +34,9 @@ nav ul li {
 section {
     width:1180px;height: 600px;
     background-color: #2e2d29;
-/*    padding: 0px 10px 0px 10px;*/
-font-size: 17px;
-    border-style: solid; border-width: 10px; border-color: #005900;
+    padding: 0px 10px 0px 10px;
+    font-size: 17px;
+    border-radius: 20px; border-style: solid; border-width: 10px; border-color: #005900;
 }
 
 aside {
@@ -59,6 +63,7 @@ aside img{
 
 /* Style The Dropdown Button */
 .dropbtn {
+    font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;
     background-color: #2e2d29;
     color: white;
     padding: 0px;
