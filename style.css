@@ -5,11 +5,14 @@ body {
     width: 1220px;
     font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;
     font-weight: 300;
-    color:white;background-color:#13294b;
+    color:white;
+    background-color:#13294b;
 }
 
 header {
-    background-color:#2e2d29;
+/*    background-color:#2e2d29;*/
+
+  background: linear-gradient(to right, rgba(0,0,0,0.5),rgba(125,10,125,0.6));
     padding:1em; margin-bottom: 1em;
     
 }
@@ -21,6 +24,7 @@ header {
 
 ol.c {
     list-style-type: upper-roman;
+    
 }
 
 
@@ -95,7 +99,7 @@ aside img{
 /* Style The Dropdown Button */
 .dropbtn {
     font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;
-    background-color: #2e2d29;
+    background-color: rgba(0,0,0,0);
     color: white;
     padding: 0px;
     font-size: 16px;
@@ -141,6 +145,29 @@ aside img{
 }
 
 
+
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
 nav a:visited, header a:visited, footer a:visited,
 nav a:link, header a:link, footer a:link, header a:hover, header a:active,
 article a:link, article a:visited {
@@ -148,6 +175,13 @@ article a:link, article a:visited {
     color:white;
     font-size:1em;
 }
+
+a,a:link, a:visited {
+    text-decoration: none;
+    color:white;
+    font-size:1em;
+}
+
 nav a:hover, footer a:hover, nav a:active, footer a:active, article a:active,
 article a:hover  {
     text-decoration: underline;
