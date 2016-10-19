@@ -103,11 +103,8 @@
                                 <div class="w3-col s1">
                                     <img class="demo w3-border w3-hover-shadow" src="Project_Samples/curves_vector_space/fig5.png" style="width:100%" onclick="currentDiv(5)">
                                         </div>
-                                </div>
-<!--                            <br>-->
 
-                                <div class="w3-row-padding w3-section" style ="margin: auto;">
-                                
+
                                 <div class="w3-col s1">
                                     <img class="demo w3-border w3-hover-shadow" src="Project_Samples/curves_vector_space/fig6.png" style="width:100%" onclick="currentDiv(6)">
                                         </div>
@@ -128,8 +125,7 @@
                                     <img class="demo w3-border w3-hover-shadow" src="Project_Samples/curves_vector_space/fig10.png" style="width:100%" onclick="currentDiv(10)">
                                         </div>
                             </div>
-                            </div>
-            
+
         </section>
         
         
@@ -177,14 +173,12 @@
             }
         
         function currentDiv(n) {
-            console.log(n);
             showDivs(slideIndex = n);
         }
         
         function showDivs(n) {
             var i;
             var x = document.getElementsByClassName("mySlides");
-            console.log(x);
             var dots = document.getElementsByClassName("demo");
             if (n > x.length) {slideIndex = 1}
             if (n < 1) {slideIndex = x.length}
