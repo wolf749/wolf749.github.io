@@ -98,6 +98,14 @@ aside img{
     max-width: 100%;
 }
 
+.w3-col.s4{width:33.33333%}
+.w3-border-red,.w3-hover-border-red:hover{border-color:#f44336!important}
+.w3-col{float:left;width:100%}
+.w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0px 4px}
+.w3-col.s1{width:9.0%}
+.w3-section{margin-top:6px!important;margin-bottom:4px!important}
+
+
 /* Style The Dropdown Button */
 .dropbtn {
     font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;
