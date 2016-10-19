@@ -51,28 +51,50 @@
 
         <section>
             
-            <aside>
-                <a href = "Project_Samples/terrain_sample2.png"><img src="Project_Samples/terrain_sample2.png" width="375" height="375"></a>
-                    </aside>
-            
-            <article>
-                <h3 class ="specialname"> Procedural Terrain 7/10/16 </h3>
-                <p> <br>This is the first of hopefully many procedural generation projects!</br>
-                <br>The essential idea here is to generate some [interesting] 3D noise from Perlin Noise, then apply a mesh to it using Marching Cubes. I was inspired to try this project by Nvidia's article, <a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch01.html">Generating Complex Procedural Terrains Using the GPU</a>. I coded up this Mathematica version to gain a better understanding of the method explained in Nvidia's article. I've been working on porting over to a C++ / OpenGL version that utilizes the GPU to do all the noise sampling, hopefully more on that soon.
-                </br>
-                
-                
-                <br> Marching Cubes is an algorithm that takes a density function, and outputs a mesh [of triangles] that represents the isosurface where the density function is zero.  </br>
-                
-                <br> I borrowed the Perlin Noise code from <a href="http://flafla2.github.io/2014/08/09/perlinnoise.html">Adrian's Soapbox.</a><br>
-                
 
-                </p>
+            <button class="accordion">Pathfinding</button>
+            <div class="panel">
+                <p> In this section I'm going to give an overview of Pathfinding algorithms in video games [and in research]. </p>
                 
-            </article>
+                <p>
+                Pathfinding in games almost exclusively use <a href="https://en.wikipedia.org/wiki/A*_search_algorithm">A*</a>, however there are many approaches to the continuum version of the question (pathfinding on smooth manifolds). Before jumping into that, I have to mention the landmark hierarchical A* paper by Botea et al. (2004) <a href="https://webdocs.cs.ualberta.ca/~mmueller/ps/hpastar.pdf"> Near Optimal Hierachical Path-Finding</a>. There's also the 2006 Siggraph paper <a href="https://pdfs.semanticscholar.org/1f05/4e5f08a5ab00e6766eab5b80bad0e437fe77.pdf"> Continuum Crowds, </a> that tackles pathfinding in a completely different manner, and is particularly applicable to games with many agents. </p>
+                
+                <p>
+                I've gotten interested in solving pathfinding problems on smooth surfaces, which typically includes solving the <a href="https://en.wikipedia.org/wiki/Geodesic">geodesic equations</a>.
+                Here are some good research papers on different strategies to tackle these equations. </p>
+                <ol class="c">
+                    <li> <a href="http://www.pnas.org/content/95/15/8431.long"> Fast Marching Method on a Triangulated Surface [1998 Kimmel, Sethian] </a> </li>
+                    <li> <a href="https://people.math.osu.edu/memoli.2/papers/dphi.pdf"> Geodesics for an Implicit Surface [2001, Memoli, Sapiro] </a> </li>
+                    <li> <a href="http://www.cs.harvard.edu/~sjg/papers/geod.pdf"> Continuous A* [2005, Surazhsky et al.] </a> </li>
+                    <li> <a href="http://www.sciencedirect.com/science/article/pii/S0021999106003664"> Geodesic Phase Flow [2006, Ying, Candes] </a> </li>
+                    <li> <a href="http://cs.stanford.edu/people/jbaek/18.821.paper2.pdf"> Steepest Descent [2007, Baek et al.] </a> </li>
+                    <li> <a href="https://www.geometrictools.com/Documentation/RiemannianGeodesics.pdf"> Hierarchical Relaxation [2008, Eberly] </a> </li>
+                    <li> <a href="http://www.cccg.ca/proceedings/2011/papers/paper81.pdf"> Polyhedral Embedding [2011, Scheffer et al.] </a> </li>
+                    <li> <a href="https://arxiv.org/abs/1301.6064"> Monte Carlo [2013, Bryne et al.] </a> </li>
+                    <li> <a href="http://www.ntulily.org/wp-content/uploads/journal/Solving_the_Initial_Value_Problem_of_Discrete_Geodesics_accepted.pdf"> Discrete Geodesics [2015, Cheng et al.] </a> </li>
+                </ol>
+                
+                <p> Also a few papers on porting these techniques to the GPU. </p>
+                
+                <ol class="c">
+                    <li> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.295.7511&rep=rep1&type=pdf"> GPU Accelerated Cardiac Cell Modeling [2010, Lionetti et al.]</a> </li>
+                    <li> <a href="http://dl.acm.org/citation.cfm?id=1413968"> GPU Accelerated Pathfinding [2008, NVIDIA: Bleiweiss]</a> </li>
+                    <li> <a href="http://publications.lib.chalmers.se/records/fulltext/129175.pdf"> A* Algorithm for GPUs [2009, Inam] </a> </li>
+                </ol>
+                
+            </div>
             
-            <div class="cl  earfloats"></div>
+            <button class="accordion">Terrain Generation</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
             
+            <button class="accordion">Real Time Strategy AI</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+
         </section>
         
         <footer>

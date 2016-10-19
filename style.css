@@ -71,7 +71,9 @@ section {
     background-color: #2e2d29;
     padding: 0px 10px 0px 10px;
     font-size: 17px;
-    border-radius: 20px; border-style: solid; border-width: 10px; border-color: #005900;
+    border-radius: 20px; border-style: solid; border-width: 10px;
+    border-color: #005900;
+/*    border-color: #505050;*/
 }
 
 aside {
@@ -85,7 +87,7 @@ aside {
 aside img{
     position:absolute;
     top:0;
-    bottom:150px;
+    bottom:0px;
     left:0;
     right:0;
     margin:auto;
