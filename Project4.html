@@ -6,7 +6,7 @@
         <meta charset="utf-8">
             <meta name="Description" content="">
                 <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+                    </head>
     
     
     <!--[if lt IE 9]>
@@ -47,33 +47,40 @@
         </header>
         
         
-<!--        Project 1 Section-->
-
+        <!--        Project 1 Section-->
+        
         <section>
             
-            <aside>
-                <a href = "Project_Samples/terrain_sample2.png"><img src="Project_Samples/terrain_sample2.png" width="375" height="375"></a>
-                    </aside>
+            <!--            <aside style="height:231px; position:relative; padding-top: 20px; margin-right: 10px;">-->
+            <!--                <a href = "Project_Samples/curves_vector_space.png">-->
+            <!--                    <img src="Project_Samples/curves_vector_space/fig1.png" width="550"height="215">-->
+            <!--                        </a>-->
+            <!--            </aside>-->
             
             <article>
-                <h3 class ="specialname"> Procedural Terrain 7/10/16 </h3>
-                <p> <br>This is the first of hopefully many procedural generation projects!</br>
-                <br>The essential idea here is to generate some [interesting] 3D noise from Perlin Noise, then apply a mesh to it using Marching Cubes. I was inspired to try this project by Nvidia's article, <a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch01.html">Generating Complex Procedural Terrains Using the GPU</a>. I coded up this Mathematica version to gain a better understanding of the method explained in Nvidia's article. I've been working on porting over to a C++ / OpenGL version that utilizes the GPU to do all the noise sampling, hopefully more on that soon.
+                <h3 class ="specialname"> Procedural Curves 6/5/16 </h3>
+                <p><br> This project is my implementation of Dongsung Huh's paper on <a href="https://arxiv.org/abs/1506.07515"> The Vector Space of Convex Curves: How to Mix Shapes</a></br>
+                <br> This paper outlines a really cool idea: how to add curves together in a visually native way. The math here is right out of differentiable geometry, where the log-radius is specified by a period function. I came across this paper while trying to devise a way to pick a procedurally generate a castle. In particular, how to generate the outline a castle should occupy [walls, towers, and the like can follow pretty naturally once the outline is specified].
                 </br>
                 
                 
-                <br> Marching Cubes is an algorithm that takes a density function, and outputs a mesh [of triangles] that represents the isosurface where the density function is zero.  </br>
-                
-                <br> I borrowed the Perlin Noise code from <a href="http://flafla2.github.io/2014/08/09/perlinnoise.html">Adrian's Soapbox.</a><br>
-                
-
                 </p>
                 
             </article>
+
             
-            <div class="cl  earfloats"></div>
-            
-        </section>
+            <div class="w3-content" style="max-width:900px; max-height:431px; margin: auto;">
+                <img class="mySlides" src="Project_Samples/bezier_patch/bezier_soln2.png" style="width:80%; margin: auto;">
+                    <img class="mySlides" src="Project_Samples/bezier_patch/bezier_soln.png" style="width:80%; margin: auto;">
+                        <img class="mySlides" src="Project_Samples/bezier_patch/bezier_setup1.png" style="width:80%; margin: auto;">
+                            
+                            <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                                <button class="w3-btn demo" onclick="currentDiv(1)">1</button>
+                                <button class="w3-btn demo" onclick="currentDiv(2)">2</button>
+                                <button class="w3-btn demo" onclick="currentDiv(3)">3</button>
+                            </div>
+                            </section>
+        
         
         <footer>
             <div class=contactinfo>
@@ -107,6 +114,36 @@
                 <p>&copy; 2015 <a href="./">Clayton Anderson</a>. All rights reserved.</p>
             </div>
         </footer>
+        
+        
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+        
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+        
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-border-red", "");
+            }
+            x[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " w3-border-red";
+        }
+        </script>
         
     </body>
 </html>

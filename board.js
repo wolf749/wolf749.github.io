@@ -10,7 +10,7 @@ var cellHeight = 40;
 var numHor = bw / cellWidth; // Number of horizontal tiles
 var numVert = bh / cellHeight; // Number of vertical tiles
 
-var canvas = $('<canvas/>').attr({width: cw, height: ch}).appendTo('body');
+var canvas = $('<canvas/>').attr({width: cw, height: ch}).appendTo('aside');
 // var button = $('<button/>').appendTo('body');
 // var button2 = button.get(0).addEventListener("click", updateGame);
 var context = canvas.get(0).getContext("2d");
