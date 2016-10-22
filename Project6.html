@@ -63,16 +63,13 @@
             </aside>
 
             <article>
-                <h3 class ="specialname"> Procedural Terrain 7/10/16 </h3>
-                <p> <br>This is the first of hopefully many procedural generation projects!</br>
-                <br>The essential idea here is to generate some [interesting] 3D noise from Perlin Noise, then apply a mesh to it using Marching Cubes. I was inspired to try this project by Nvidia's article, <a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch01.html">Generating Complex Procedural Terrains Using the GPU</a>. I coded up this Mathematica version to gain a better understanding of the method explained in Nvidia's article. I've been working on porting over to a C++ / OpenGL version that utilizes the GPU to do all the noise sampling, hopefully more on that soon.
-                </br>
+                <h3 class ="specialname"> Generalized Thomson Problem </h3>
+                <p>
+                The Thomson problem (link) asks given a sphere, and some points inside it, how should we arrange the points to make them as far away from each other as possible? For two points it's pretty easy, you can just put them on opposite (antipodal) points of the sphere. For three, it'll be a triangle. For four it becomes a little more interesting - should we arrange the points in a square with each point on the surface of the sphere or should we make a triangular pyramid (tetrahedron). For an arbitrary number of points, the problem hasn't been solved analytically.
+                </p>
                 
-                
-                <br> Marching Cubes is an algorithm that takes a density function, and outputs a mesh [of triangles] that represents the isosurface where the density function is zero.  </br>
-                
-                <br> I borrowed the Perlin Noise code from <a href="http://flafla2.github.io/2014/08/09/perlinnoise.html">Adrian's Soapbox.</a><br>
-                
+                <p>
+                This project gives a numerical approach to the thomson problem (the generalized part comes from considering surfaces other than a sphere). It has a qualitative component where each point is moved away from whichever point is closest to it, and a quantitative component where each point is orthogonally projected back onto the sphere if moving away from the point nearest would push it outside the sphere. Each of the surfaces have 50 points inside them.
                 </p>
                 
             </article>

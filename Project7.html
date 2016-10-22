@@ -58,12 +58,19 @@
             <!--            </aside>-->
             
             <article>
-                <h3 class ="specialname"> Procedural Curves 6/5/16 </h3>
-                <p><br> This project is my implementation of Dongsung Huh's paper on <a href="https://arxiv.org/abs/1506.07515"> The Vector Space of Convex Curves: How to Mix Shapes</a></br>
-                <br> This paper outlines a really cool idea: how to add curves together in a visually native way. The math here is right out of differentiable geometry, where the log-radius is specified by a period function. I came across this paper while trying to devise a way to pick a procedurally generate a castle. In particular, how to generate the outline a castle should occupy [walls, towers, and the like can follow pretty naturally once the outline is specified].
-                </br>
+                <h3 class ="specialname"> Shape Grammar Building </h3>
+                <p>
+                I discuss procedural generation of terrain quite a bit here (give link). However, for non-organic shapes, like houses, buildings, we need a different approach. This project is a first step in Shape Grammars (link), which generate a shape from a set of iterated rules. For instance, suppose my rules are A -> AB, B -> C, C -> A, and that I start with A. Then the sequence I generate from applying my rules 5 times is
+                </p>
+                <p style="text-align:center;"> A -> AB -> ABCA -> ABCAAB -> ABCAABABC -> ABCAABABCABCA
+                </p>
                 
+                <p>
+                These types of rules can often generate very interesting patterns. The structure below was made with rules like Wall -> Entrance + Room, and Room -> Room + Room Above, with some probabilistic components where I wouldn't apply the rules to every possible variable (like I did with the ABC example), but would only change some of the walls into entrances, etc.
+                </p>
                 
+                <p>
+                This project was implemented in C++ / OpenGL (not Mathematica!).
                 </p>
                 
             </article>
@@ -71,12 +78,12 @@
             
             <div class="w3-content" style="max-width:900px; overflow: hidden; margin: auto;">
                 <img class="mySlides" src="Project_Samples/shape_grammar/shape_grammar.png" style="width:80%; margin: auto;">
-                    <img class="mySlides" src="Project_Samples/shape_grammar/heightMap.png" style="width:80%; margin: auto;">
+<!--                    <img class="mySlides" src="Project_Samples/shape_grammar/heightMap.png" style="width:80%; margin: auto;">-->
 
                             
                             <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
                                 <button class="w3-btn demo" onclick="currentDiv(1)">1</button>
-                                <button class="w3-btn demo" onclick="currentDiv(2)">2</button>
+<!--                                <button class="w3-btn demo" onclick="currentDiv(2)">2</button>-->
                             </div>
                             </section>
         

@@ -58,13 +58,17 @@
             <!--            </aside>-->
             
             <article>
-                <h3 class ="specialname"> Procedural Curves 6/5/16 </h3>
-                <p><br> This project is my implementation of Dongsung Huh's paper on <a href="https://arxiv.org/abs/1506.07515"> The Vector Space of Convex Curves: How to Mix Shapes</a></br>
-                <br> This paper outlines a really cool idea: how to add curves together in a visually native way. The math here is right out of differentiable geometry, where the log-radius is specified by a period function. I came across this paper while trying to devise a way to pick a procedurally generate a castle. In particular, how to generate the outline a castle should occupy [walls, towers, and the like can follow pretty naturally once the outline is specified].
-                </br>
-                
-                
+                <h3 class ="specialname"> Bezier Patch Pathfinding  </h3>
+                <p> This project gives one approach for solving the pathfinding problem (geodesic equations) via the shooting-method for nonlinear boundary value problems (link to wolfram).</a><br>
+                <br>
+                Mathematically, a boundary value problem is when you have some equations and you want to specify the solution at several different points. For example, on my Bezier Patch, I want a path between two points such that the length of the path is as small as it can be. For contrast, consider the initial value problem: given a starting place, and a starting velocity (in particular the direction of the velocity), what path will I follow? The first problem is harder because in some sense I don't know which way to go right from the beginning, whereas in the initial value version, I'm given an initial velocity so I know my path has to start out in that direction.
                 </p>
+                <p>
+                So the strategy here is guess some initial velocity, and if it takes me exactly to the point I want to end up at, that's great and I'm done. But if I don't end up at the point, I'll have to guess a new initial velocity. This is the shooting-method with the condition that the "guessing" is done by root-finding methods (like Newton's method, give link).
+                
+                 </p>
+                
+                <p> The third picture shows the 16 control points of the Bezier Patch, and a triangulation of those points, as opposed to the smooth Bezier patch in blue.
                 
             </article>
 

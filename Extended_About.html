@@ -111,24 +111,24 @@
                 </p>
                 
                 <p>
-                If we take a step back and think what we want from procedural terrain, we want to have smooth curves, hills, overhangs, cliffs, you know, terrain. However we probably don't want to specify each and every one of these (if we did, we'd just model it in Maya). What we want is to be able to generate terrain features according to some distribution. This is exactly what Solid Noise Synthesis (link to paper) is all about.
+                If we take a step back and think what we want from procedural terrain: we want to have smooth curves, hills, overhangs, cliffs, you know, terrain. However we probably don't want to specify each and every one of these (if we did, we'd just model it in Maya). What we want is to be able to generate terrain features according to some distribution. This is exactly what Solid Noise Synthesis (link to paper) is all about.
                 
                 If you're familiar with Fourier Series, we can basically create a Fourier Series with certain properties that correspond to the terrain features we want (e.g. rapid changes like cliffs come from high frequency components while smooth sloping hills come from low frequency components). There are some famous noise distributions namely Perlin noise, or Simplex noise (links). Some examples of terrain created with Perlin noise are (link to my project).
                 </p>
-                Thus far I've talked about how we can create surfaces mathematically, but not how to use those mathematics to generate the triangulation for rendering. This brings us to Marching Cubes, Dual Contouring, and Ray Tracing. These methods take an implicit surface and output a mesh. (algorithm years)
+                Thus far I've talked about how we can create surfaces mathematically, but not how to use those mathematics to generate the triangulation for rendering. This brings us to Marching Cubes (1987), Dual Contouring (2002), and Ray Tracing (active research topic). These methods take an implicit surface and output a mesh. (algorithm years)
                 </p>
                 
                 <p> Lastly, I want to mention how level of detail and pathfinding are impacted by the underlying surface representation (whether you got the mesh from Maya or an implicit function). If we have an implicit surface already defined, and we triangulate it during runtime (computationally challenging) we can set the level of detail dynamically. Normally this would be a problem for pathfinding because A* generally uses a nav-mesh representation of the terrain mesh, and if the terrain mesh depends on the level of detail things could get a bit dicey. This can be avoided by doing the pathfinding on the implicit surface itself (kind of hard), then projecting the path onto the terrain mesh. I'm not sure there are any major games using this approach. </p>
                 
                 <p> Here are some good resources for reading up on the different approaches to generating surfaces. </p>
                 <ol class="c">
-                    <li> <a href="http://www.frankpetterson.com/publications/dualcontour/dualcontour.pdf"> Dual Contour [2002, Ju et al.]</a> </li>
-                    <li> <a href="http://www.springer.com/us/book/9781848824058"> Implicit Surfaces, Data Structures, Algorithms [2009, Gomes et al.] </a> </li>
-                    <li> <a href="http://paulbourke.net/geometry/polygonise/"> Marching Cubes [1994, Paul Bourke Tutorial / Implementation] </a> </li>
-                    <li> <a href="http://graphics.cs.illinois.edu/sites/default/files/morseism.pdf"> Morse Theory for Implicit Surface Modeling [1998, Hart]</a> </li>
-                    <li> <a href="http://scribblethink.org/Work/Crunge/crunge.pdf"> Solid Noise Synthesis [1989, Lewis] </a> </li>
-                    <li> <a href="http://www.csse.monash.edu/~jonmc/research/Papers/CONVOLUT.PDF"> Creating, Rendering Convolution Surfaces [1997, McCormack]</a> </li>
                     <li> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.3053&rep=rep1&type=pdf"> Convolution Surface [1991, Bloomenthal, Shoemake]</a> </li>
+                    <li> <a href="http://www.frankpetterson.com/publications/dualcontour/dualcontour.pdf"> Dual Contour [2002, Ju et al.]</a> </li>
+                    <li> <a href="http://paulbourke.net/geometry/polygonise/"> Marching Cubes [1994, Paul Bourke Tutorial / Implementation] </a> </li>
+                    <li> <a href="http://scribblethink.org/Work/Crunge/crunge.pdf"> Solid Noise Synthesis [1989, Lewis] </a> </li>
+                    <li> <a href="http://www.springer.com/us/book/9781848824058"> Implicit Surfaces, Data Structures, Algorithms [2009, Gomes et al.] </a> </li>
+                    <li> <a href="http://graphics.cs.illinois.edu/sites/default/files/morseism.pdf"> Morse Theory for Implicit Surface Modeling [1998, Hart]</a> </li>
+                    <li> <a href="http://www.csse.monash.edu/~jonmc/research/Papers/CONVOLUT.PDF"> Creating, Rendering Convolution Surfaces [1997, McCormack]</a> </li>
                     <li> <a href="http://www.cescg.org/CESCG-2008/papers/TUBudapest-Liktor-Gabor.pdf"> Ray Tracing on the GPU [2008, Liktor]</a> </li>
                     <li> <a href="http://www.sci.utah.edu/~wald/Publications/2007/ImplicitsTR/download/rtia-tr.pdf"> Iteractive Ray Tracing [2007, Knoll et al.] </a> </li>
                 </ol>
