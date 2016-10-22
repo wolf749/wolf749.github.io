@@ -103,7 +103,7 @@
                 </p>
                 
                 <p>
-                One of the issues that this a tough topic, is that it's not really obvious how to add together surfaces in either implicit or parametrized form. If I have two planes given implicitly by f1(x,y,z) = 1, f2(x,y,z) = 2, or parametrized by g1(u,v), g2(u,v). It's not clear how to make a new implicit function that has two surfaces corresponding to f1, f2 or a new parametrized function corresponding to g1, g2. Something like f3(x,y,z) = f1(x,y,z) + f2(x,y,z) = 3 doesn't work because we want this equation to be true only for f1 = 1, f2 = 2, but maybe there will be some points (x,y,z) with f1 = -5, and f2 = 8 so f1 + f2 = 3. We'd be including those points if we defined f3 = f1 + f2. Somewhat more serious, if some f1(1,2,3) = 1, the point (1,2,3) is on the surface but is not(!) necessarily on the surface f3(1,2,3) = f1(1,2,3) + f2(1,2,3) = 1 + f2(1,2,3). So we'll only keep (1,2,3) on the new surface if f2(1,2,3) = 2, which we have can't force to be true without mucking up the other surface, f2.
+                One of the reasons that this a tough topic, is that it's not really obvious how to add together surfaces in either implicit or parametrized form. If I have two planes given implicitly by f1(x,y,z) = 1, f2(x,y,z) = 2, or parametrized by g1(u,v), g2(u,v). It's not clear how to make a new implicit function that has two surfaces corresponding to f1, f2 or a new parametrized function corresponding to g1, g2. Something like f3(x,y,z) = f1(x,y,z) + f2(x,y,z) = 3 doesn't work because we want this equation to be true only for f1 = 1, f2 = 2, but maybe there will be some points (x,y,z) with f1 = -5, and f2 = 8 so f1 + f2 = 3. We'd be including those points if we defined f3 = f1 + f2. Somewhat more serious, if some f1(1,2,3) = 1, the point (1,2,3) is on the surface but is not(!) necessarily on the surface f3(1,2,3) = f1(1,2,3) + f2(1,2,3) = 1 + f2(1,2,3). So we'll only keep (1,2,3) on the new surface if f2(1,2,3) = 2, which we have can't force to be true without mucking up the other surface, f2.
                 </p>
                 
                 <p>
@@ -122,7 +122,7 @@
                 
                 <p> Here are some good resources for reading up on the different approaches to generating surfaces. </p>
                 <ol class="c">
-                    <li> <a href="http://www.frankpetterson.com/publications/dualcontour/dualcontour.pdf"> Dual Contour </a> </li>
+                    <li> <a href="http://www.frankpetterson.com/publications/dualcontour/dualcontour.pdf"> Dual Contour [2002, Ju et al.]</a> </li>
                     <li> <a href="http://www.springer.com/us/book/9781848824058"> Implicit Surfaces Textbook </a> </li>
                     <li> <a href="http://paulbourke.net/geometry/polygonise/"> Marching Cubes </a> </li>
                     <li> <a href="http://graphics.cs.illinois.edu/sites/default/files/morseism.pdf"> Morse Theory </a> </li>
