@@ -96,25 +96,41 @@
             
             <button class="accordion">Terrain Generation</button>
             <div class="panel">
-                <p> In this section I'm going to talk about some of the procedural generation algorithms / methodologies for terrain generation. </p>
+                <p> In this section I'm going to talk about some of the procedural generation algorithms terrain (surfaces in general, really). </p>
                 
                 <p>
-                Surfaces in mathematics have two canonical representations: implicit surfaces versus parametrized surfaces. The former are usually functions set to some constant value, so suppose f(x,y,z) = x + y + z. Then f(x,y,z) = 0 is the equation of a plane. These surfaces are somewhat harder to work with because often times they're quite complicated so their triangulation relies on algorithms like marching cubes, or dual contour methods. As an example of parametrized surfaces, we can take the equation f(x, y, z) = x + y + z = 0 and solve for z = - (x + y). Then a parametrization for this plane would be another function g(u, v) = (u, v, -(u+v)). This time the function takes in two arguments (it makes sense that there are two since we typically think about surfaces as being two-dimensional), and gives us a point in 3D space. This is nice because we know for any (u, v), g(u, v) is always on the surface (this is unlike the implicit version where we don't immediately know if some point (x, y, z) lies on the surface or not).                                
+                Surfaces in mathematics have two canonical representations: implicit surfaces versus parametrized surfaces. The former are usually functions set to some constant value, so suppose f(x,y,z) = x + y + z. Then f(x,y,z) = 0 is the equation of a plane. These surfaces are somewhat harder to work with because often times they're quite complicated so their triangulation relies on algorithms like marching cubes, or dual contour methods. As an example of parametrized surfaces, we can take the equation f(x, y, z) = x + y + z = 0 and solve for z = - (x + y). Then a parametrization for this plane would be another function g(u, v) = (u, v, -(u+v)). This time the function takes in two arguments (it makes sense that there are two since we typically think about surfaces as being two-dimensional), and gives us a point in 3D space. This is nice because we know for any (u, v), g(u, v) is always on the surface (this is unlike the implicit version where we don't immediately know if some point (x, y, z) lies on the surface or not).
                 </p>
                 
                 <p>
-                I've gotten interested in solving pathfinding problems on smooth surfaces, which typically includes solving the <a href="https://en.wikipedia.org/wiki/Geodesic">geodesic equations</a>.
-                Here are some good research papers on different strategies to tackle these equations. </p>
+                One of the issues that this a tough topic, is that it's not really obvious how to add together surfaces in either implicit or parametrized form. If I have two planes given implicitly by f1(x,y,z) = 1, f2(x,y,z) = 2, or parametrized by g1(u,v), g2(u,v). It's not clear how to make a new implicit function that has two surfaces corresponding to f1, f2 or a new parametrized function corresponding to g1, g2. Something like f3(x,y,z) = f1(x,y,z) + f2(x,y,z) = 3 doesn't work because we want this equation to be true only for f1 = 1, f2 = 2, but maybe there will be some points (x,y,z) with f1 = -5, and f2 = 8 so f1 + f2 = 3. We'd be including those points if we defined f3 = f1 + f2. Somewhat more serious, if some f1(1,2,3) = 1, the point (1,2,3) is on the surface but is not(!) necessarily on the surface f3(1,2,3) = f1(1,2,3) + f2(1,2,3) = 1 + f2(1,2,3). So we'll only keep (1,2,3) on the new surface if f2(1,2,3) = 2, which we have can't force to be true without mucking up the other surface, f2.
+                </p>
+                
+                <p>
+                A solution to this problem of adding surfaces together was proposed in 1991 by Jules Bloomenthal and Ken Shoemake. However, it's more geared towards implicit surface modeling (in the traditional 3d-modeling sense of the word) than procedural generation so I'll move on for now.
+                </p>
+                
+                <p>
+                If we take a step back and think what we want from procedural terrain, we want to have smooth curves, hills, overhangs, cliffs, you know, terrain. However we probably don't want to specify each and every one of these (if we did, we'd just model it in Maya). What we want is to be able to generate terrain features according to some distribution. This is exactly what Solid Noise Synthesis (link to paper) is all about.
+                
+                If you're familiar with Fourier Series, we can basically create a Fourier Series with certain properties that correspond to the terrain features we want (e.g. rapid changes like cliffs come from high frequency components while smooth sloping hills come from low frequency components). There are some famous noise distributions namely Perlin noise, or Simplex noise (links). Some examples of terrain created with Perlin noise are (link to my project).
+                </p>
+                Thus far I've talked about how we can create surfaces mathematically, but not how to use those mathematics to generate the triangulation for rendering. This brings us to Marching Cubes, Dual Contouring, and Ray Tracing. These methods take an implicit surface and output a mesh. (algorithm years)
+                </p>
+                
+                <p> Lastly, I want to mention how level of detail and pathfinding are impacted by the underlying surface representation (whether you got the mesh from Maya or an implicit function). If we have an implicit surface already defined, and we triangulate it during runtime (computationally challenging) we can set the level of detail dynamically. Normally this would be a problem for pathfinding because A* generally uses a nav-mesh representation of the terrain mesh, and if the terrain mesh depends on the level of detail things could get a bit dicey. This can be avoided by doing the pathfinding on the implicit surface itself (kind of hard), then projecting the path onto the terrain mesh. I'm not sure there are any major games using this approach. </p>
+                
+                <p> Here are some good resources for reading up on the different approaches to generating surfaces. </p>
                 <ol class="c">
-                    <li> <a href="http://www.pnas.org/content/95/15/8431.long"> Fast Marching Method on a Triangulated Surface [1998 Kimmel, Sethian] </a> </li>
-                    <li> <a href="https://people.math.osu.edu/memoli.2/papers/dphi.pdf"> Geodesics for an Implicit Surface [2001, Memoli, Sapiro] </a> </li>
-                    <li> <a href="http://www.cs.harvard.edu/~sjg/papers/geod.pdf"> Continuous A* [2005, Surazhsky et al.] </a> </li>
-                    <li> <a href="http://www.sciencedirect.com/science/article/pii/S0021999106003664"> Geodesic Phase Flow [2006, Ying, Candes] </a> </li>
-                    <li> <a href="http://cs.stanford.edu/people/jbaek/18.821.paper2.pdf"> Steepest Descent [2007, Baek et al.] </a> </li>
-                    <li> <a href="https://www.geometrictools.com/Documentation/RiemannianGeodesics.pdf"> Hierarchical Relaxation [2008, Eberly] </a> </li>
-                    <li> <a href="http://www.cccg.ca/proceedings/2011/papers/paper81.pdf"> Polyhedral Embedding [2011, Scheffer et al.] </a> </li>
-                    <li> <a href="https://arxiv.org/abs/1301.6064"> Monte Carlo [2013, Bryne et al.] </a> </li>
-                    <li> <a href="http://www.ntulily.org/wp-content/uploads/journal/Solving_the_Initial_Value_Problem_of_Discrete_Geodesics_accepted.pdf"> Discrete Geodesics [2015, Cheng et al.] </a> </li>
+                    <li> <a href="http://www.frankpetterson.com/publications/dualcontour/dualcontour.pdf"> Dual Contour </a> </li>
+                    <li> <a href="http://www.springer.com/us/book/9781848824058"> Implicit Surfaces Textbook </a> </li>
+                    <li> <a href="http://paulbourke.net/geometry/polygonise/"> Marching Cubes </a> </li>
+                    <li> <a href="http://graphics.cs.illinois.edu/sites/default/files/morseism.pdf"> Morse Theory </a> </li>
+                    <li> <a href="http://scribblethink.org/Work/Crunge/crunge.pdf"> Solid Noise Synthesis </a> </li>
+                    <li> <a href="http://www.csse.monash.edu/~jonmc/research/Papers/CONVOLUT.PDF"> Creating, Rendering Convolution Surfaces </a> </li>
+                    <li> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.3053&rep=rep1&type=pdf"> Convolution Surface </a> </li>
+                    <li> <a href=""> Monte Carlo [2013, Bryne et al.] </a> </li>
+                    <li> <a href=""> Discrete Geodesics [2015, Cheng et al.] </a> </li>
                 </ol>
                 
                 <p> Also a few papers on porting these techniques to the GPU. </p>
