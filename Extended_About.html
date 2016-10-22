@@ -96,7 +96,34 @@
             
             <button class="accordion">Terrain Generation</button>
             <div class="panel">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p> In this section I'm going to talk about some of the procedural generation algorithms / methodologies for terrain generation. </p>
+                
+                <p>
+                Surfaces in mathematics have two canonical representations: implicit surfaces versus parametrized surfaces. The former are usually functions set to some constant value, so suppose f(x,y,z) = x + y + z. Then f(x,y,z) = 0 is the equation of a plane. These surfaces are somewhat harder to work with because often times they're quite complicated so their triangulation relies on algorithms like marching cubes, or dual contour methods. As an example of parametrized surfaces, we can take the equation f(x, y, z) = x + y + z = 0 and solve for z = - (x + y). Then a parametrization for this plane would be another function g(u, v) = (u, v, -(u+v)). This time the function takes in two arguments (it makes sense that there are two since we typically think about surfaces as being two-dimensional), and gives us a point in 3D space. This is nice because we know for any (u, v), g(u, v) is always on the surface (this is unlike the implicit version where we don't immediately know if some point (x, y, z) lies on the surface or not).                                
+                </p>
+                
+                <p>
+                I've gotten interested in solving pathfinding problems on smooth surfaces, which typically includes solving the <a href="https://en.wikipedia.org/wiki/Geodesic">geodesic equations</a>.
+                Here are some good research papers on different strategies to tackle these equations. </p>
+                <ol class="c">
+                    <li> <a href="http://www.pnas.org/content/95/15/8431.long"> Fast Marching Method on a Triangulated Surface [1998 Kimmel, Sethian] </a> </li>
+                    <li> <a href="https://people.math.osu.edu/memoli.2/papers/dphi.pdf"> Geodesics for an Implicit Surface [2001, Memoli, Sapiro] </a> </li>
+                    <li> <a href="http://www.cs.harvard.edu/~sjg/papers/geod.pdf"> Continuous A* [2005, Surazhsky et al.] </a> </li>
+                    <li> <a href="http://www.sciencedirect.com/science/article/pii/S0021999106003664"> Geodesic Phase Flow [2006, Ying, Candes] </a> </li>
+                    <li> <a href="http://cs.stanford.edu/people/jbaek/18.821.paper2.pdf"> Steepest Descent [2007, Baek et al.] </a> </li>
+                    <li> <a href="https://www.geometrictools.com/Documentation/RiemannianGeodesics.pdf"> Hierarchical Relaxation [2008, Eberly] </a> </li>
+                    <li> <a href="http://www.cccg.ca/proceedings/2011/papers/paper81.pdf"> Polyhedral Embedding [2011, Scheffer et al.] </a> </li>
+                    <li> <a href="https://arxiv.org/abs/1301.6064"> Monte Carlo [2013, Bryne et al.] </a> </li>
+                    <li> <a href="http://www.ntulily.org/wp-content/uploads/journal/Solving_the_Initial_Value_Problem_of_Discrete_Geodesics_accepted.pdf"> Discrete Geodesics [2015, Cheng et al.] </a> </li>
+                </ol>
+                
+                <p> Also a few papers on porting these techniques to the GPU. </p>
+                
+                <ol class="c">
+                    <li> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.295.7511&rep=rep1&type=pdf"> GPU Accelerated Cardiac Cell Modeling [2010, Lionetti et al.]</a> </li>
+                    <li> <a href="http://dl.acm.org/citation.cfm?id=1413968"> GPU Accelerated Pathfinding [2008, NVIDIA: Bleiweiss]</a> </li>
+                    <li> <a href="http://publications.lib.chalmers.se/records/fulltext/129175.pdf"> A* Algorithm for GPUs [2009, Inam] </a> </li>
+                </ol>
             </div>
             
             <button class="accordion">Real Time Strategy AI</button>
