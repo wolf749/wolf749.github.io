@@ -111,16 +111,26 @@
             <button class="accordion">Poisson Eq. as Pathfinding</button>
             <div class="panel">
                 <p>
-                Opposite sign charges attract one another. In pathfinding algorithms, often the question is "find the shortest path" between two points. However, we might as a different question, "what would charges do?" If two charges are constrained to a surface, and their interaction (electric field) can only take place on the surface-- what path will they take to approach one another? To solve this problem analytically, we should consider the Poisson Equation on the surface, which involves the christoffel symbols, and is generally quite ugly. However, it does not reduce to the Geodesic Equations, and what's more, we want to solve a special case of the Poisson Eq., namely find the Green's function for the Laplacian on the surface. This approach possibly amenable to analytic techniques since there is quite extensive literature on Green's functions, however they typically refer to only curvilinear or orthogonal coordinate systems, which Bezier Patches are not.
+                Opposite sign charges attract one another. 
                 </p>
             </div>
             
+            <button class="accordion">Ideal Pathfinding Data Structure / Representation</button>
+            <div class="panel">
+                <p>
+                
+                </p>
+            </div>
+            
+            <button class="accordion">Implicit Surface Modeling</button>
+            <div class="panel">
+                <p>
+                </p>
+            </div>
             
             <button class="accordion">Interpolating Families of Curves</button>
             <div class="panel">
                 <p>
-                Suppose we're pre-computing paths between points on a surface. We could store these paths as sequences of points on the surface. Now we know each path represents a Geodesic on the surface, however we don't have an analytic expression for exactly what curve the path represents. However, we know that the space of geodesics is two-dimensional, in the sense that when we specify two points, there will be a geodesic between them (we are not too concerned with the possibility of having multiple equidistant geodesics between points, since both are likely good paths for pathfinding). The question then becomes if we want to do fast pathfinding, (i.e. something better than solving the geodesic equations each time during run tim) what can we do? If we consider each path as a sequence of points, then we are essentially trying to interpolate this family of curves over a two dimensional parameter space. This is somewhat reminiscent of surface interpolation of point clouds from 3D scanners.
-                
                 </p>
             </div>
             
