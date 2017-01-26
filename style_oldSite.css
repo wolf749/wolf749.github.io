@@ -3,20 +3,19 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 1220px;
-/*    font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;*/
-font-family:  "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;
     font-weight: 300;
 /*    color:white;*/
 /*    background-color:#13294b; /* Dark grey */*/
 color:black;
-background-color:#FFF9EB;
+background-color:#FFFFFF;
 /*background-color:#FFFFFF;*/
 }
 
 header {
 /*    background-color:#2e2d29;*/
 
-/*  background: linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.5));*/
+  background: linear-gradient(to right, rgba(0,0,0,0.5),rgba(125,10,125,0.6));
     padding:1em; margin-bottom: 1em;
     
 }
@@ -34,27 +33,25 @@ ol.c {
 
 
 button.accordion {
-/*    background-color: #BFF1EB;*/
-background-color: #FFFFFF;
+    background-color: #BFF1EB;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     border-radius: 4px; border-style: solid; border-width: 2px; border-color: #005900;
     text-align: left;
     outline: none;
-/*    font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;*/
-font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;
     font-size: 15px;
 }
 
 button.accordion.active, button.accordion:hover {
-/*    background-color: #9EC3FF;*/
+    background-color: #9EC3FF;
 }
 
 div.panel {
     padding: 0 10px;
     display: none;
-    background-color: #FFF9EB;
+    background-color: #2e2d29;
 }
 
 div.panel.show {
@@ -79,8 +76,7 @@ background-color: #FFFFFF;
     padding: 0px 10px 0px 10px;
     font-size: 17px;
     border-radius: 20px; border-style: solid; border-width: 10px;
-/*    border-color: #005900;*/
-border-color: #699DFF;
+    border-color: #005900;
         overflow: hidden;
 /*    border-color: #505050;*/
 }
@@ -137,8 +133,7 @@ iframe {margin: auto; display: block;}
 
 /* Style The Dropdown Button */
 .dropbtn {
-/*    font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;*/
-font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    font-family: Palatino,Helvetica,"Times New Roman",Garamond , Arial, sans-serif;
     background-color: rgba(0,0,0,0);
     color: white;
     padding: 0px;
@@ -157,8 +152,7 @@ font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
 .dropdown-content {
     display: none;
     position: absolute;
-/*    background-color: #2e2d29;*/
-background-color: #ffffff;
+    background-color: #2e2d29;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1000;
@@ -213,14 +207,14 @@ nav a:visited, header a:visited, footer a:visited,
 nav a:link, header a:link, footer a:link, header a:hover, header a:active,
 article a:link, article a:visited {
     text-decoration: none;
-/*    color:blue;*/
-color:#3B7FFF;
+    color:white;
     font-size:1em;
 }
 
 a,a:link, a:visited {
     text-decoration: none;
-    color:blue;
+/*    color:white;*/
+color:white;
     font-size:1em;
 }
 
@@ -233,7 +227,8 @@ article a:hover  {
 
 footer {
     clear:both;
-    background-color:#ffffff;
+/*    background-color:#2e2d29;*/
+background-color:#ffffff;
     padding:1em; margin-top: 1em;
     padding-top:0.7em;
 }
