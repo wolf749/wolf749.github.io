@@ -55,11 +55,33 @@
             
             <article>
                 <h3 class ="specialname"> CSE 163: Assignment 1 - Image and Signal Processing 4/28/17 </h3>
-                <p><br> 3.1 General: Writeup and Program Behavior </br>
+                <p><br> 3.1 General: Writeup and Program Behavior </br></p>
                 
-                <a href="./CSE_163_PA1/image.zip" download>Executable</a>
+                <p>
+                A few comments on my code and assignment in general.
+                </br>
+                </br>
+                I wrote a couple different versions of the convolution method for use in the filters methods (Blur, Sharpen, EdgeDetect). They all pretty much do the same thing except one writes to an output array (as opposed to the current image), one takes an input array (as opposed to the current image), and a few other similar differences.
+                </br>
+                </br>
+                I based my convolution filters and sampling methods off lambda functions (kind of important note -- I modified the Makefile to use -std=c++11) since floating point functions come more naturally to me than digital ones. This made all the convolution methods very similar, and going to the re-scale / shift was essentially the same because I'd already implemented some other floating point formulas (i.e. gaussian blur).
                 
+                </br>
+                </br>
+                In the quantization / dithering sections I renormalized the weights on the edges, while for all other convolution methods I applied toroidal boundary conditions (including in shift, which seems somewhat controversial according to piazza).
+                </br>
+                </br>
+                I had a bit of trouble understanding what the original filter width of the Mitchell and Hat filters was supposed to be, however I finally understood we were to integrate over [-2,2] for Mitchell and [-1,1] for the Hat filter. This is represented in my code as "radius = 2" in the convolution methods.
+                </br>
+                </br>
+                I'm a little concerned about my shift on the checkerboard as all three sampling methods look essentially the same and I wasn't able to get the solution .exe to work to check the proper output. Speaking of which, the solution .exe throws the BMP file error even when I use the given files (I coded this up on mac but tried the .exe on windows 7).                
+                </br>
+                </br>
+                Lastly, as a gift to the graders, I did not implement a fun nonlinear filter. Enjoy grading!
                 </p>
+                <p><a href="./CSE_163_PA1/image_mysol.zip" download>Executable</a></p>
+                
+                
                 
             </article>
             
