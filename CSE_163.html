@@ -53,51 +53,329 @@
         
         <section>
             
-            <!--            <aside style="height:231px; position:relative; padding-top: 20px; margin-right: 10px;">-->
-            <!--                <a href = "Project_Samples/curves_vector_space.png">-->
-            <!--                    <img src="Project_Samples/curves_vector_space/fig1.png" width="550"height="215">-->
-            <!--                        </a>-->
-            <!--            </aside>-->
-            
             <article>
-                <h3 class ="specialname"> Procedural Curves 6/5/16 </h3>
-                <p><br> This project is my implementation of Dongsung Huh's paper on <a href="https://arxiv.org/abs/1506.07515"> The Vector Space of Convex Curves: How to Mix Shapes</a></br>
-                <br> This paper outlines a really cool idea: how to add curves together in a visually native way. The math here is right out of differentiable geometry, where the log-radius is specified by a period function. I came across this paper while trying to devise a way to procedurally generate the outline for a castle (walls, towers, and the like can follow pretty naturally once the outline is specified). The pictures below show the addition of two curves specified by three parameters, n, m, and epsilon.
-                </br>
+                <h3 class ="specialname"> CSE 163: Assignment 1 - Image and Signal Processing 4/28/17 </h3>
+                <p><br> 3.1 General: Writeup and Program Behavior </br>
                 
                 
                 </p>
                 
             </article>
             
-            <div class="cl  earfloats"></div>
-            
-            
-            <div class="w3-content" style="max-width:900px; max-height:431px; margin: auto;">
-                <img class="mySlides" src="Project_Samples/curves_vector_space/fig2.png" style="width:100%">
-                    <img class="mySlides" src="Project_Samples/curves_vector_space/fig1.png" style="width:100%">
-                        <img class="mySlides" src="Project_Samples/curves_vector_space/fig3.png" style="width:100%">
-                            <img class="mySlides" src="Project_Samples/curves_vector_space/fig4.png" style="width:100%">
-                                <img class="mySlides" src="Project_Samples/curves_vector_space/fig5.png" style="width:100%">
-                                    <img class="mySlides" src="Project_Samples/curves_vector_space/fig6.png" style="max-height:310px; margin: auto;">
-                                        <img class="mySlides" src="Project_Samples/curves_vector_space/fig7.png" style="max-height:310px; margin: auto;">
-                                            <img class="mySlides" src="Project_Samples/curves_vector_space/fig8.png" style="max-height:310px; margin: auto;">
-                                                <img class="mySlides" src="Project_Samples/curves_vector_space/fig9.png" style="max-height:310px; margin: auto;">
-                                                    <img class="mySlides" src="Project_Samples/curves_vector_space/fig10.png" style="max-height:310px; margin: auto;">
-                                                        
-                                                        <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
-                                                            <button class="w3-btn demo" onclick="currentDiv(1)">1</button>
-                                                            <button class="w3-btn demo" onclick="currentDiv(2)">2</button>
-                                                            <button class="w3-btn demo" onclick="currentDiv(3)">3</button>
-                                                            <button class="w3-btn demo" onclick="currentDiv(4)">4</button>
-                                                            <button class="w3-btn demo" onclick="currentDiv(5)">5</button>
-                                                            <button class="w3-btn demo" onclick="currentDiv(6)">6</button>
-                                                            <button class="w3-btn demo" onclick="currentDiv(7)">7</button>
-                                                            <button class="w3-btn demo" onclick="currentDiv(8)">8</button>
-                                                            <button class="w3-btn demo" onclick="currentDiv(9)">9</button>
-                                                        </div>
-                                                        </section>
+
+        </section>
         
+        <!--        Basic Operations Section-->
+        
+        <section>
+            <article>
+                <h3 class ="specialname"> 3.2 Basic Operations </h3>
+            </article>
+            
+            <!--        Brightness Section-->
+            <p><br> Brightness Section </br></p>
+            <div class="cl  earfloats"></div>
+            <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                <img class="mySlides1" src="CSE_163_PA1/bright1.bmp" style="width:100%"></img>
+                <img class="mySlides1" src="CSE_163_PA1/bright2.bmp" style="width:100%"></img>
+                <img class="mySlides1" src="CSE_163_PA1/bright3.bmp" style="width:100%"></img>
+            </div>
+            
+            <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                <button class="w3-btn demo1" onclick="currentDiv(0,0)">1</button>
+                <button class="w3-btn demo1" onclick="currentDiv(1,0)">2</button>
+                <button class="w3-btn demo1" onclick="currentDiv(2,0)">3</button>
+            </div>
+            
+            <!--        Contrast Section-->
+            <p><br> Contrast Section </br></p>
+            <div class="cl  earfloats"></div>
+            <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                <img class="mySlides2" src="CSE_163_PA1/contrast1.bmp" style="width:100%"></img>
+                <img class="mySlides2" src="CSE_163_PA1/contrast2.bmp" style="width:100%"></img>
+                <img class="mySlides2" src="CSE_163_PA1/contrast3.bmp" style="width:100%"></img>
+            </div>
+            
+            <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                <button class="w3-btn demo2" onclick="currentDiv(0,1)">1</button>
+                <button class="w3-btn demo2" onclick="currentDiv(1,1)">2</button>
+                <button class="w3-btn demo2" onclick="currentDiv(2,1)">3</button>
+            </div>
+            
+            <!--        Saturation Section-->
+            <p><br> Saturation Section </br></p>
+            <div class="cl  earfloats"></div>
+            <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                <img class="mySlides3" src="CSE_163_PA1/saturation1.bmp" style="width:100%"></img>
+                <img class="mySlides3" src="CSE_163_PA1/saturation2.bmp" style="width:100%"></img>
+                <img class="mySlides3" src="CSE_163_PA1/saturation3.bmp" style="width:100%"></img>
+            </div>
+            
+            <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                <button class="w3-btn demo3" onclick="currentDiv(0,2)">1</button>
+                <button class="w3-btn demo3" onclick="currentDiv(1,2)">2</button>
+                <button class="w3-btn demo3" onclick="currentDiv(2,2)">3</button>
+            </div>
+            
+            <!--        Gamma Section-->
+            <p><br> Gamma Section </br></p>
+            <div class="cl  earfloats"></div>
+            <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                <img class="mySlides4" src="CSE_163_PA1/gamma1.bmp" style="width:100%"></img>
+                <img class="mySlides4" src="CSE_163_PA1/gamma2.bmp" style="width:100%"></img>
+                <img class="mySlides4" src="CSE_163_PA1/gamma3.bmp" style="width:100%"></img>
+            </div>
+            
+            <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                <button class="w3-btn demo4" onclick="currentDiv(0,3)">1</button>
+                <button class="w3-btn demo4" onclick="currentDiv(1,3)">2</button>
+                <button class="w3-btn demo4" onclick="currentDiv(2,3)">3</button>
+            </div>
+            
+            <!--        Crop Section-->
+            <p><br> Crop Section </br></p>
+            <div class="cl  earfloats"></div>
+            <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                <img class="mySlides5" src="CSE_163_PA1/crop1.bmp" style="width:100%"></img>
+                <img class="mySlides5" src="CSE_163_PA1/crop2.bmp" style="width:100%"></img>
+                <img class="mySlides5" src="CSE_163_PA1/crop3.bmp" style="width:100%"></img>
+            </div>
+            
+            <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                <button class="w3-btn demo5" onclick="currentDiv(0,4)">1</button>
+                <button class="w3-btn demo5" onclick="currentDiv(1,4)">2</button>
+                <button class="w3-btn demo5" onclick="currentDiv(2,4)">3</button>
+            </div>
+            
+        </section>
+        
+        <!--        Quantization and Dithering Section-->
+        
+        <section>
+            <article>
+                <h3 class ="specialname"> 3.3 Quantization and Dithering </h3>
+            </article>
+            
+            <!--        Quantize Section-->
+            <p><br> Quantize Section </br></p>
+            <div class="cl  earfloats"></div>
+            <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                <img class="mySlides6" src="CSE_163_PA1/quantize1.bmp" style="width:100%"></img>
+                <img class="mySlides6" src="CSE_163_PA1/quantize2.bmp" style="width:100%"></img>
+                <img class="mySlides6" src="CSE_163_PA1/quantize3.bmp" style="width:100%"></img>
+                <img class="mySlides6" src="CSE_163_PA1/quantize4.bmp" style="width:100%"></img>
+                <img class="mySlides6" src="CSE_163_PA1/quantize5.bmp" style="width:100%"></img>
+            </div>
+            
+            <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                <button class="w3-btn demo6" onclick="currentDiv(0,5)">1</button>
+                <button class="w3-btn demo6" onclick="currentDiv(1,5)">2</button>
+                <button class="w3-btn demo6" onclick="currentDiv(2,5)">3</button>
+                <button class="w3-btn demo6" onclick="currentDiv(3,5)">4</button>
+                <button class="w3-btn demo6" onclick="currentDiv(4,5)">5</button>
+            </div>
+            
+            <!--        Random Dither Section-->
+            <p><br> Random Dither Section </br></p>
+            <div class="cl  earfloats"></div>
+            <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                <img class="mySlides7" src="CSE_163_PA1/randomDither1.bmp" style="width:100%"></img>
+                <img class="mySlides7" src="CSE_163_PA1/randomDither2.bmp" style="width:100%"></img>
+                <img class="mySlides7" src="CSE_163_PA1/randomDither3.bmp" style="width:100%"></img>
+                <img class="mySlides7" src="CSE_163_PA1/randomDither4.bmp" style="width:100%"></img>
+                <img class="mySlides7" src="CSE_163_PA1/randomDither5.bmp" style="width:100%"></img>
+            </div>
+            
+            <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                <button class="w3-btn demo7" onclick="currentDiv(0,6)">1</button>
+                <button class="w3-btn demo7" onclick="currentDiv(1,6)">2</button>
+                <button class="w3-btn demo7" onclick="currentDiv(2,6)">3</button>
+                <button class="w3-btn demo7" onclick="currentDiv(3,6)">4</button>
+                <button class="w3-btn demo7" onclick="currentDiv(4,6)">5</button>
+            </div>
+            
+            <!--        Floyd-Steinberg Dither Section-->
+            <p><br> Floyd-Steinberg Dither Section </br></p>
+            <div class="cl  earfloats"></div>
+            <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                <img class="mySlides8" src="CSE_163_PA1/Floyd1.bmp" style="width:100%"></img>
+                <img class="mySlides8" src="CSE_163_PA1/Floyd2.bmp" style="width:100%"></img>
+                <img class="mySlides8" src="CSE_163_PA1/Floyd3.bmp" style="width:100%"></img>
+                <img class="mySlides8" src="CSE_163_PA1/Floyd4.bmp" style="width:100%"></img>
+                <img class="mySlides8" src="CSE_163_PA1/Floyd5.bmp" style="width:100%"></img>
+            </div>
+            
+            <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                <button class="w3-btn demo8" onclick="currentDiv(0,7)">1</button>
+                <button class="w3-btn demo8" onclick="currentDiv(1,7)">2</button>
+                <button class="w3-btn demo8" onclick="currentDiv(2,7)">3</button>
+                <button class="w3-btn demo8" onclick="currentDiv(3,7)">4</button>
+                <button class="w3-btn demo8" onclick="currentDiv(4,7)">5</button>
+            </div>
+        </section>
+        
+        <section>
+            <article>
+                <h3 class ="specialname"> 3.4 Basic Convolution and Edge Detection </h3>
+                
+                <!--        Blur Section-->
+                <p><br> Blur Section </br></p>
+                <div class="cl  earfloats"></div>
+                <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                    <img class="mySlides9" src="CSE_163_PA1/blur1.bmp" style="width:100%"></img>
+                    <img class="mySlides9" src="CSE_163_PA1/blur2.bmp" style="width:100%"></img>
+                    <img class="mySlides9" src="CSE_163_PA1/blur3.bmp" style="width:100%"></img>
+                    <img class="mySlides9" src="CSE_163_PA1/blur4.bmp" style="width:100%"></img>
+                    <img class="mySlides9" src="CSE_163_PA1/blur5.bmp" style="width:100%"></img>
+                </div>
+                
+                <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                    <button class="w3-btn demo9" onclick="currentDiv(0,8)">1</button>
+                    <button class="w3-btn demo9" onclick="currentDiv(1,8)">2</button>
+                    <button class="w3-btn demo9" onclick="currentDiv(2,8)">3</button>
+                    <button class="w3-btn demo9" onclick="currentDiv(3,8)">4</button>
+                    <button class="w3-btn demo9" onclick="currentDiv(4,8)">5</button>
+                </div>
+                
+                <!--        Sharpen Section-->
+                <p><br> Sharpen Section </br></p>
+                <div class="cl  earfloats"></div>
+                <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                    <img class="mySlides10" src="CSE_163_PA1/sharpen1.bmp" style="width:100%"></img>
+                    <img class="mySlides10" src="CSE_163_PA1/sharpen2.bmp" style="width:100%"></img>
+                    <img class="mySlides10" src="CSE_163_PA1/sharpen3.bmp" style="width:100%"></img>
+                </div>
+                
+                <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                    <button class="w3-btn demo10" onclick="currentDiv(0,9)">1</button>
+                    <button class="w3-btn demo10" onclick="currentDiv(1,9)">2</button>
+                    <button class="w3-btn demo10" onclick="currentDiv(2,9)">3</button>
+                </div>
+                
+                <!--        Edge Detection Section-->
+                <p><br> Edge Detection Section </br></p>
+                <div class="cl  earfloats"></div>
+                <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                    <img class="mySlides11" src="CSE_163_PA1/edge1.bmp" style="width:100%"></img>
+                    <img class="mySlides11" src="CSE_163_PA1/edge2.bmp" style="width:100%"></img>
+                    <img class="mySlides11" src="CSE_163_PA1/edge3.bmp" style="width:100%"></img>
+                    <img class="mySlides11" src="CSE_163_PA1/edge4.bmp" style="width:100%"></img>
+                    <img class="mySlides11" src="CSE_163_PA1/edge5.bmp" style="width:100%"></img>
+                </div>
+                
+                <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                    <button class="w3-btn demo11" onclick="currentDiv(0,10)">1</button>
+                    <button class="w3-btn demo11" onclick="currentDiv(1,10)">2</button>
+                    <button class="w3-btn demo11" onclick="currentDiv(2,10)">3</button>
+                    <button class="w3-btn demo11" onclick="currentDiv(3,10)">4</button>
+                    <button class="w3-btn demo11" onclick="currentDiv(4,10)">5</button>
+                </div>
+            </article>
+        </section>
+        
+        <section>
+            <article>
+                <h3 class ="specialname"> 3.5 Antialiased Scale and Shift </h3>
+                
+                <!--        Point Sampling Scale Section-->
+                <p><br> Point Sampling Scale Section </br></p>
+                <div class="cl  earfloats"></div>
+                <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                    <img class="mySlides12" src="CSE_163_PA1/scale01.bmp" style="max-height:431px"></img>
+                    <img class="mySlides12" src="CSE_163_PA1/scale02.bmp" style="max-height:431px"></img>
+                    <img class="mySlides12" src="CSE_163_PA1/scale03.bmp" style="max-height:431px"></img>
+                    <img class="mySlides12" src="CSE_163_PA1/scale04.bmp" style="max-height:431px"></img>
+                </div>
+                
+                <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                    <button class="w3-btn demo12" onclick="currentDiv(0,11)">1</button>
+                    <button class="w3-btn demo12" onclick="currentDiv(1,11)">2</button>
+                    <button class="w3-btn demo12" onclick="currentDiv(2,11)">3</button>
+                    <button class="w3-btn demo12" onclick="currentDiv(3,11)">4</button>
+                </div>
+                
+                <!--        Hat Sampling Scale Section-->
+                <p><br> Hat Sampling Scale Section </br></p>
+                <div class="cl  earfloats"></div>
+                <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                    <img class="mySlides13" src="CSE_163_PA1/scale11.bmp" style="max-height:431px"></img>
+                    <img class="mySlides13" src="CSE_163_PA1/scale12.bmp" style="max-height:431px"></img>
+                    <img class="mySlides13" src="CSE_163_PA1/scale13.bmp" style="max-height:431px"></img>
+                    <img class="mySlides13" src="CSE_163_PA1/scale14.bmp" style="max-height:431px"></img>
+                </div>
+                
+                <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                    <button class="w3-btn demo13" onclick="currentDiv(0,12)">1</button>
+                    <button class="w3-btn demo13" onclick="currentDiv(1,12)">2</button>
+                    <button class="w3-btn demo13" onclick="currentDiv(2,12)">3</button>
+                    <button class="w3-btn demo13" onclick="currentDiv(3,12)">4</button>
+                </div>
+                
+                <!--        Mitchell Sampling Scale Section-->
+                <p><br> Mitchell Sampling Scale Section </br></p>
+                <div class="cl  earfloats"></div>
+                <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                    <img class="mySlides14" src="CSE_163_PA1/scale21.bmp" style="max-height:431px"></img>
+                    <img class="mySlides14" src="CSE_163_PA1/scale22.bmp" style="max-height:431px"></img>
+                    <img class="mySlides14" src="CSE_163_PA1/scale23.bmp" style="max-height:431px"></img>
+                    <img class="mySlides14" src="CSE_163_PA1/scale24.bmp" style="max-height:431px"></img>
+                </div>
+                
+                <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                    <button class="w3-btn demo14" onclick="currentDiv(0,13)">1</button>
+                    <button class="w3-btn demo14" onclick="currentDiv(1,13)">2</button>
+                    <button class="w3-btn demo14" onclick="currentDiv(2,13)">3</button>
+                    <button class="w3-btn demo14" onclick="currentDiv(3,13)">4</button>
+                </div>
+                
+                
+                
+                <!--        Point Sampling Shift Section-->
+                <p><br> Point Sampling Shift Section </br></p>
+                <div class="cl  earfloats"></div>
+                <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                    <img class="mySlides15" src="CSE_163_PA1/shift01.bmp" style="max-height:431px"></img>
+                    <img class="mySlides15" src="CSE_163_PA1/shift02.bmp" style="max-height:431px"></img>
+                </div>
+                
+                <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                    <button class="w3-btn demo15" onclick="currentDiv(0,14)">1</button>
+                    <button class="w3-btn demo15" onclick="currentDiv(1,14)">2</button>
+                </div>
+                
+                <!--        Hat Filter Shift Section-->
+                <p><br> Hat Filter Shift Section </br></p>
+                <div class="cl  earfloats"></div>
+                <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                    <img class="mySlides16" src="CSE_163_PA1/shift11.bmp" style="max-height:431px"></img>
+                    <img class="mySlides16" src="CSE_163_PA1/shift12.bmp" style="max-height:431px"></img>
+                </div>
+                
+                <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                    <button class="w3-btn demo16" onclick="currentDiv(0,15)">1</button>
+                    <button class="w3-btn demo16" onclick="currentDiv(1,15)">2</button>
+                </div>
+                
+                <!--        Mitchell Filter Shift Section-->
+                <p><br> Mitchell Filter Shift Section </br></p>
+                <div class="cl  earfloats"></div>
+                <div class="w3-content" style="max-width:500px; max-height:431px; margin: auto;">
+                    <img class="mySlides17" src="CSE_163_PA1/shift21.bmp" style="max-height:431px"></img>
+                    <img class="mySlides17" src="CSE_163_PA1/shift22.bmp" style="max-height:431px"></img>
+                </div>
+                
+                <div class="w3-center" style="padding: 10px 0px 10px 0px;" >
+                    <button class="w3-btn demo17" onclick="currentDiv(0,16)">1</button>
+                    <button class="w3-btn demo17" onclick="currentDiv(1,16)">2</button>
+                </div>
+            </article>
+        </section>
+        
+        <section>
+            <article>
+                <h3 class ="specialname"> 3.6 Fun nonlinear filters </h3>
+            </article>
+        </section>
         
         <footer>
             <div class=contactinfo>
@@ -134,31 +412,53 @@
         
         
         <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
+            var slides = ["mySlides1","mySlides2", "mySlides3", "mySlides4",
+                          "mySlides5","mySlides6","mySlides7","mySlides8",
+                          "mySlides9","mySlides10","mySlides11","mySlides12",
+                          "mySlides13","mySlides14","mySlides15","mySlides16",
+                          "mySlides17"];
+            var demos = ["demo1", "demo2", "demo3", "demo4", "demo5",
+                         "demo6", "demo7", "demo8", "demo9", "demo10",
+                         "demo11", "demo12", "demo13", "demo14", "demo15",
+                         "demo16", "demo17"];
             
-            function plusDivs(n) {
-                showDivs(slideIndex += n);
+            var slideIndex = [0,0,0,0,0,
+                              0,0,0,0,0,
+                              0,0,0,0,0,
+                              0,0];
+                              
+            
+            for (var j = 0; j < slideIndex.length; j++)
+            {
+                showDivs(slideIndex[j],j);
+            }
+            
+            function plusDivs(n, index) {
+                slideIndex[index] += n;
+                showDivs(slideIndex[index], index);
             }
         
-        function currentDiv(n) {
-            showDivs(slideIndex = n);
+        function currentDiv(n, index) {
+            slideIndex[index] = n;
+            showDivs(slideIndex[index], index);
         }
         
-        function showDivs(n) {
+        function showDivs(n, index) {
             var i;
-            var x = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
+            var x = document.getElementsByClassName(slides[index]);
+            var dots = document.getElementsByClassName(demos[index]);
+            
+            if (n > x.length) {slideIndex[index] = 0}
+            if (n < 0) {slideIndex[index] = 0}
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" w3-red", "");
             }
-            x[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " w3-red";
+
+            x[slideIndex[index]].style.display = "block";
+            dots[slideIndex[index]].className += " w3-red";
         }
         </script>
         
